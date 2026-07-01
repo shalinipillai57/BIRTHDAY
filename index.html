@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Nisha ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fad0c4);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+}
+
+/* Card */
+
+.card{
+background:rgba(255,255,255,.25);
+backdrop-filter:blur(10px);
+padding:40px;
+border-radius:25px;
+width:420px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+z-index:2;
+}
+
+h1{
+font-size:45px;
+color:#ff4d88;
+}
+
+h2{
+margin:10px 0;
+color:#444;
+}
+
+p{
+margin-top:20px;
+line-height:1.8;
+color:#555;
+}
+
+button{
+margin-top:30px;
+padding:14px 30px;
+border:none;
+border-radius:30px;
+background:#ff4d88;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+/* Balloons */
+
+.balloon{
+position:absolute;
+bottom:-150px;
+font-size:55px;
+animation:float 8s linear infinite;
+}
+
+.balloon:nth-child(1){left:10%;animation-delay:0s;}
+.balloon:nth-child(2){left:30%;animation-delay:2s;}
+.balloon:nth-child(3){left:55%;animation-delay:4s;}
+.balloon:nth-child(4){left:80%;animation-delay:1s;}
+
+@keyframes float{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(-120vh);
+}
+}
+
+/* Confetti */
+
+.confetti{
+position:absolute;
+width:10px;
+height:18px;
+top:-20px;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh) rotate(720deg);
+opacity:0;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="balloon">🎈</div>
+<div class="balloon">🎈</div>
+<div class="balloon">🎈</div>
+<div class="balloon">🎈</div>
+
+<div class="card">
+
+<h1>🎂 Advance Happy Birthday Nisha!</h1>
+
+<h2>Dear Bestieeee❤️</h2>
+
+<p>
+ 🌸 Happy Birthday in Advance! 💖
+
+Dear Nishanthiiii,
+
+I couldn't wait until your special day to tell you how much you mean to me. So here's a little surprise, just for you. ❤️
+
+Happy Birthday in advance! 🎉
+
+You are one of the kindest, funniest, and most amazing people I've ever met. Thank you for all the laughter, memories, and support you've given me. I truly hope this new year of your life brings you endless happiness, good health, success, and countless beautiful moments.
+
+
+</p>
+
+<button onclick="celebrate()">
+🎊 Celebrate!
+</button>
+
+</div>
+
+<script>
+
+function celebrate(){
+
+alert("🎉 Happy Birthday! Wishing you a day filled with love and laughter! ❤️");
+
+for(let i=0;i<180;i++){
+
+let conf=document.createElement("div");
+
+conf.className="confetti";
+
+conf.style.left=Math.random()*100+"vw";
+
+conf.style.backgroundColor=
+`hsl(${Math.random()*360},100%,50%)`;
+
+conf.style.animationDuration=
+(Math.random()*3+2)+"s";
+
+document.body.appendChild(conf);
+
+setTimeout(()=>{
+conf.remove();
+},5000);
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
