@@ -1,1 +1,124 @@
 # BIRTHDAY
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hidden Birthday Letter</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ffd6e7,#ffeef5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    text-align:center;
+}
+
+button{
+    padding:15px 30px;
+    font-size:18px;
+    border:none;
+    border-radius:30px;
+    background:#ff4d88;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.letter{
+    width:400px;
+    background:white;
+    margin-top:25px;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+    opacity:0;
+    transform:translateY(30px);
+    max-height:0;
+    overflow:hidden;
+    transition:all 0.8s ease;
+}
+
+.letter.show{
+    opacity:1;
+    transform:translateY(0);
+    max-height:600px;
+}
+
+h2{
+    color:#ff4d88;
+    margin-bottom:15px;
+}
+
+p{
+    line-height:1.8;
+    color:#555;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>🎂 Happy Birthday in Advance ❤️</h1>
+
+<button onclick="openLetter()">
+💌 Open My Letter
+</button>
+
+<div class="letter" id="letter">
+
+<h2>Dear Best Friend 💖</h2>
+
+<p>
+I know your birthday hasn't arrived yet...
+but I couldn't wait to tell you how much you mean to me. ❤️
+</p>
+
+<p>
+Thank you for every smile, every laugh, and every beautiful memory we've shared together.
+You make ordinary days feel special just by being yourself.
+</p>
+
+<p>
+I hope this birthday brings you happiness, success, love, and countless unforgettable moments.
+Never stop smiling because your smile brightens the lives of everyone around you.
+</p>
+
+<p>
+Happy Birthday in Advance! 🎉🎂<br><br>
+
+With lots of love,<br>
+❤️ Your Friend
+</p>
+
+</div>
+
+</div>
+
+<script>
+function openLetter(){
+    document.getElementById("letter").classList.add("show");
+}
+</script>
+
+</body>
+</html>
